@@ -1,1 +1,600 @@
+/* подключаем шрифты */
+@font-face {
+    /* задаём название */
+    font-family: 'ubuntu-regular';
+    /* указываем путь */
+    src: url('assets/fonts/Ubuntu-Regular.ttf');
+    /* задаём толщину начертания */
+    font-weight: 400;
+}
 
+@font-face {
+    font-family: 'ubuntu-medium';
+    src: url('assets/fonts/Ubuntu-Medium.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'ubuntu-bold';
+    src: url('assets/fonts/Ubuntu-Bold.ttf');
+    font-weight: 800;
+}
+
+/* обращаемся к тегу body */
+body {
+    /* обнуляем внутр. и внеш. отступы */
+    margin: 0;
+    padding: 0;
+    /* цвет фона */
+    background-color: #eef5ff;
+}
+
+.container {
+    /* растягиваем блок на всю ширину экрана */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrp {
+    display: flex;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    height: 570px;
+}
+
+.sidebar-wrp {
+    background-image: url('assets/images/bg-sidebar-desktop.svg');
+    width: 274px;
+    height: 568px;
+    background-size: contain;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.sidebar-item {
+    display: flex;
+    margin: 0 0 30px 0;
+}
+
+.sidebar-item-num-1,
+.sidebar-item-num-2,
+.sidebar-item-num-3,
+.sidebar-item-num-4 {
+    font-family: 'ubuntu-bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin: 0 15px 0 0;
+    color: #fff;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.sidebar-item-selected {
+    background-color: #bee1ff;
+    color: black;
+    border: 0;
+}
+
+.sidebar-item-cont-step {
+    font-family: 'ubuntu-regular';
+    text-transform: uppercase;
+    color: rgb(194, 194, 194);
+    font-size: 13px;
+}
+
+.sidebar-item-cont-info {
+    font-family: 'ubuntu-bold';
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+}
+
+.step-content-wrp {
+    padding: 10px 50px 10px 100px;
+    width: 475px;
+}
+
+.step-content-1 {
+    display: block;
+}
+
+.step-content-2 {
+    display: none;
+}
+
+.step-content-3 {
+    display: none;
+}
+
+.step-content-3-year {
+    display: none;
+}
+
+.step-content-4 {
+    display: none;
+}
+
+.step-content-4 {
+    display: none;
+}
+
+.step-content-5 {
+    display: none;
+}
+
+.step-1-header {
+    font-family: 'ubuntu-bold';
+    color: #03295a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.step-1-under-header {
+    font-family: 'ubuntu-regular';
+    font-size: 16px;
+    color: rgb(122, 122, 122);
+}
+
+.step-3-under-header {
+    display: block;
+    font-family: 'ubuntu-regular';
+    font-size: 16px;
+    color: rgb(122, 122, 122);
+    margin: 0 0 42px 0;
+}
+
+.step-1-form {
+    margin-top: 50px;
+}
+
+.step-1-form-lbl {
+    font-family: 'ubuntu-regular';
+    font-size: 16px;
+    color: #03295a;
+    margin-bottom: 10px;
+}
+
+.step-1-input {
+    margin: 0 0 25px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid rgb(210, 210, 210);
+    outline: none;
+    background-color: rgba(122, 122, 122, 0);
+    font-size: 16px;
+    width: 100%;
+    transition: 250ms;
+}
+
+.step-1-input:focus {
+    border: 1px solid rgb(27, 0, 148);
+}
+
+.form-webkit::-webkit-input-placeholder {
+    font-family: 'ubuntu-medium', Arial, Helvetica, sans-serif;
+    color: rgb(150, 150, 150);
+}
+
+.form-webkit:-ms-input-placeholder {
+    font-family: 'ubuntu-medium', Arial, Helvetica, sans-serif;
+    color: rgb(150, 150, 150);
+}
+
+.form-webkit:-moz-placeholder {
+    font-family: 'ubuntu-medium', Arial, Helvetica, sans-serif;
+    color: rgb(150, 150, 150);
+}
+
+.form-webkit::-moz-placeholder {
+    font-family: 'ubuntu-medium', Arial, Helvetica, sans-serif;
+    color: rgb(150, 150, 150);
+}
+
+.form-submit-wrp {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+}
+
+.form-submit-wrp-2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    bottom: -40px;
+    left: 0px;
+}
+
+.step-1-form-back,
+.step-2-form-back,
+.step-3-form-back,
+.step-4-form-back {
+    font-family: 'ubuntu-medium';
+    display: flex;
+    align-items: center;
+    color: rgb(150, 150, 150);
+    transition: 250ms;
+}
+
+.step-2-form-back:hover {
+    cursor: pointer;
+    color: #03295a;
+}
+
+.step-3-form-back:hover {
+    cursor: pointer;
+    color: #03295a;
+}
+
+.step-4-form-back:hover {
+    cursor: pointer;
+    color: #03295a;
+}
+
+.step-1-form-submit,
+.step-2-form-submit,
+.step-3-form-submit,
+.step-4-form-submit {
+    font-family: 'ubuntu-medium';
+    text-decoration: none;
+    font-size: 18px;
+    width: 125px;
+    height: 50px;
+    background: #03295a;
+    border: 0;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+}
+
+.step-1-form-submit:hover {
+    cursor: pointer;
+    background-color: #174a8b;
+}
+
+.step-2-form-submit:hover {
+    cursor: pointer;
+    background-color: #174a8b;
+}
+
+.step-3-form-submit:hover {
+    cursor: pointer;
+    background-color: #174a8b;
+}
+
+.step-4-form-submit {
+    background: #493bff;
+    transition: 250ms;
+}
+
+.step-4-form-submit:hover {
+    cursor: pointer;
+    background: #8a81ff;
+}
+
+.cards-wrp {
+    margin: 30px 0 0 0;
+    display: flex;
+}
+
+.card {
+    padding: 16px;
+    width: 150px;
+    height: 181px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 20px 20px 0;
+    transition: 250ms;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: rgba(144, 105, 253, 0.082);
+}
+
+.card-selected {
+    background-color: #f8f9fe;
+    border: 1px solid #493bff;
+}
+
+.arcade-img {
+    margin: 0 0 50px 0;
+}
+
+.card-1-name {
+    font-family: 'ubuntu-bold';
+    color: #03295a;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin: 0 0 5px 0;
+}
+
+.card-1-cost,
+.card-2-cost,
+.card-3-cost {
+    font-family: 'ubuntu-regular';
+    color: rgb(170, 170, 170);
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin: 0;
+}
+
+.card-cost-action {
+    font-family: 'ubuntu-regular';
+    color: #03295a;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+}
+
+.tarrif-select {
+    display: flex;
+    height: 50px;
+    background-color: #f8f9fe;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 86px 0;
+    transition: 250ms;
+    border-radius: 10px;
+}
+
+.tarrif-select:hover {
+    cursor: pointer;
+    background-color: #eaebf0;
+}
+
+.tarrif-select-period {
+    font-family: 'ubuntu-medium';
+    color: rgb(170, 170, 170);
+    font-size: 16px;
+}
+
+.tarrif-active {
+    color: #03295a;
+}
+
+.tarrif-select-switch {
+    width: 38px;
+    height: 20px;
+    background-color: #03295a;
+    border-radius: 50px;
+    margin: 0 10px 0 10px;
+    padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.tarrif-select-switch-active {
+    justify-content: end;
+}
+
+.tarrif-select-switcher {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.addon-card-1,
+.addon-card-2,
+.addon-card-3 {
+    border: 1px solid #cfcfcf;
+    margin: 0 0 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 250ms;
+}
+
+.addon-card-1:hover {
+    cursor: pointer;
+    background-color: rgba(224, 221, 255, 0.233);
+}
+
+.addon-card-2:hover {
+    cursor: pointer;
+    background-color: rgba(224, 221, 255, 0.233);
+}
+
+.addon-card-3:hover {
+    cursor: pointer;
+    background-color: rgba(224, 221, 255, 0.233);
+}
+
+.addon-card-3-margin {
+    margin: 0 0 56px 0;
+}
+
+.addon-card-selected {
+    background-color: #f8f9fe;
+    border: 1px solid #493bff;
+}
+
+.addon-card-content {
+    display: flex;
+    align-items: center;
+}
+
+.addon-checkbox-1,
+.addon-checkbox-2,
+.addon-checkbox-3 {
+    height: 20px;
+    width: 20px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.addon-checkbox-selected {
+    border: 0;
+    background-color: #493bff;
+    background-image: url('assets/images/check.svg');
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+.addon-card-content-hdr {
+    font-family: 'ubuntu-medium';
+    color: #03295a;
+    font-size: 16px;
+    margin: 0 0 2px 0;
+}
+
+.addon-card-content-text {
+    font-family: 'ubuntu-regular';
+    color: rgb(170, 170, 170);
+    font-size: 16px;
+}
+
+.addon-card-content-cost {
+    font-family: 'ubuntu-medium';
+    color: #493bff;
+    font-size: 16px;
+}
+
+.submit-table {
+    background-color: #f8f9fe;
+    padding: 25px 25px 5px 25px;
+    margin: 0 0 30px 0;
+}
+
+.submit-table-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+    transition: 250ms;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tarrif-pattern {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.tarrif-pattern-cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarrif-selected {
+    font-family: 'ubuntu-medium';
+    color: #03295a;
+    font-size: 16px;
+    margin: 0 0 2px 0;
+}
+
+.tarrif-change {
+    font-family: 'ubuntu-regular';
+    color: rgb(153, 153, 153);
+    text-decoration: underline;
+    transition: 250ms;
+    margin: 0 0 20px 0;
+}
+
+.tarrif-change:hover {
+    cursor: pointer;
+    color: #493bff;
+}
+
+.tarrif-pattern-cost {
+    font-family: 'ubuntu-bold';
+    color: #03295a;
+    font-size: 16px;
+    margin: 0 0 2px 0;
+    margin: 0 0 20px 0;
+}
+
+
+.submit-addon-1,
+.submit-addon-2,
+.submit-addon-3,
+.submit-addon-1-year,
+.submit-addon-2-year,
+.submit-addon-3-year {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-addon-none {
+    display: none;
+}
+
+.submit-addon-1-cost {
+    font-family: 'ubuntu-regular';
+    color: #03295a;
+    font-size: 14px;
+}
+
+.submit-addon-1-text {
+    font-family: 'ubuntu-regular';
+    color: rgb(153, 153, 153);
+    transition: 250ms;
+    margin: 0 0 20px 0;
+}
+
+.total-cost-wrp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-cost-summ,
+.total-cost-summ-pre,
+.total-cost-summ-post {
+    font-family: 'ubuntu-bold';
+    color: #493bff;
+    font-size: 20px;
+}
+
+.finish-wrp {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+.finish-svg {
+    width: 80px;
+    height: 80px;
+    background-image: url('assets/images/icon-thank-you.svg');
+}
+
+.finish-hdr {
+    font-family: 'ubuntu-bold';
+    color: #03295a;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.finish-text {
+    font-family: 'ubuntu-regular';
+    color: rgb(153, 153, 153);
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+}
